@@ -65,7 +65,7 @@ pygame.init()
 WIDTH = 800
 HEIGHT = 600
 
-ICON = pygame.image.load("Belajar_Pygame/icon.png")
+ICON = pygame.image.load("icon.png")
 
 PLAYER_SIZE = 64
 PLAYER_CHANGE = 4
@@ -75,7 +75,7 @@ enemy_x_change = 2
 ENEMY_Y_CHANGE = 37.5
 ENEMY_SIZE = PLAYER_SIZE
 NUM_OF_ENEMIES = 6
-ENEMY_IMG = ("Belajar_Pygame/enemy1.png", "Belajar_Pygame/enemy2.png")
+ENEMY_IMG = ("enemy1.png", "enemy2.png")
 ENEMY_SPEED_INCREASE = 0.0005
 
 BULLET_SIZE = 24
@@ -85,11 +85,11 @@ SCORE_X = 10
 SCORE_Y = 10
 
 # Background
-BACKGROUND = pygame.image.load("Belajar_Pygame/spaceBackground.png")
+BACKGROUND = pygame.image.load("spaceBackground.png")
 # Sound
-bullet_sound = mixer.Sound("Belajar_Pygame/laser.wav")
+bullet_sound = mixer.Sound("laser.wav")
 bullet_sound.set_volume(0.1)
-collision_sound = mixer.Sound("Belajar_Pygame/explosion.wav")
+collision_sound = mixer.Sound("explosion.wav")
 collision_sound.set_volume(0.1)
 
 # Create a window
@@ -100,7 +100,7 @@ pygame.display.set_caption("First Game")
 pygame.display.set_icon(ICON)
 
 # Player
-playerImg = pygame.image.load('Belajar_Pygame/spaceship.png')
+playerImg = pygame.image.load('spaceship.png')
 playerImg = pygame.transform.smoothscale(
     playerImg, (PLAYER_SIZE, PLAYER_SIZE))
 playerX = (WIDTH / 2) - (PLAYER_SIZE / 2)
@@ -127,7 +127,7 @@ for i in range(NUM_OF_ENEMIES):
     enemyY_change.append(ENEMY_Y_CHANGE)
 
 # bullet
-bulletImg = pygame.image.load('Belajar_Pygame/bullet.png')
+bulletImg = pygame.image.load('bullet.png')
 bulletImg = pygame.transform.smoothscale(
     bulletImg, (BULLET_SIZE, BULLET_SIZE))
 bulletX = 0
@@ -135,18 +135,18 @@ bulletY = 0
 bullet_state = 'ready'
 
 # Score
-score_font = pygame.font.Font('Belajar_Pygame/pixel_font.ttf', 32)
+score_font = pygame.font.Font('pixel_font.ttf', 32)
 score_value = 0
 
 # Game over font
-over_font = pygame.font.Font("Belajar_Pygame/pixel_font.ttf", 64)
+over_font = pygame.font.Font("pixel_font.ttf", 64)
 isGameOver = False
 
 # Info font
-info_font = pygame.font. Font("Belajar_Pygame/pixel_font.ttf", 32)
+info_font = pygame.font. Font("pixel_font.ttf", 32)
 
 # Alert font
-alert_font = pygame.font.Font("Belajar_Pygame/pixel_font.ttf", 40)
+alert_font = pygame.font.Font("pixel_font.ttf", 40)
 
 # Game run or not
 running = True
@@ -183,7 +183,7 @@ while running and alert_count <= 3000:
 # Turn on the backsound if still running
 if running:
     mixer.music.set_volume(0.2)
-    mixer.music.load("Belajar_Pygame/backsound.wav")
+    mixer.music.load("backsound.wav")
     mixer.music.play(-1)
 
 # Game loop
